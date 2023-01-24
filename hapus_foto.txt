@@ -1,0 +1,19 @@
+<?php
+
+include('system/conf/koneksi.php');
+$edit=$_GET['del'];
+$sql=sprintf("delete from data_karyawan where id=%d",$edit);
+$sql2="SELECT * FROM data_karyawan where id='$edit'"; //query dua
+$hpsgbr=@mysql_query($sql2); //jalankan query
+$jalankan=mysql_fetch_array($hpsgbr); //pecah dtanya
+unlink("images/$jalankan[foto]"); //lalu hapus gambarnya, images merupakan letak direktori sedangkan $jalankan[foto] merupakan nama file gambar yang bersangkutan
+$del=@mysql_query($sql,$koneksi);
+if($del){
+echo "<script>alert('Data berhasil dihapus!')</script>";   
+echo "<script>window.open('index.php?page=lihat','_self')</script>";
+}else{
+ echo "Perubahan data gagal=<br/>".mysql_error();
+}
+
+
+?>
