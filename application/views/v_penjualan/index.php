@@ -109,7 +109,7 @@
                         <select name="Tahun" id="Tahun" class="form-control show-tick" required oninvalid="this.setCustomValidity('Mohon Diisi Terlebih Dahulu')">
                             <option value="">-- Tahun --</option>
                             <?php
-                            for ($i = date('Y'); $i >= date('Y') - 10; $i -= 1) {
+                            for ($i = date('Y'); $i >= date('Y') - 12; $i -= 1) {
                                 echo "<option value='$i'> $i </option>";
                             }
                             ?>
