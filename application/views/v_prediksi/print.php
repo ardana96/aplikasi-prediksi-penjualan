@@ -55,25 +55,25 @@
             <?php $no = 1; ?>
             <?php
             $tahunAwal = $tahun['Tahun'];
-            $lastYear = $tahunAkhir['Tahun'];
+            $lastYear = $tahunAkhir['Tahun'] + 1;
             ?>
             <?php foreach ($prediksi_view as $row) {
 
                 $selisih = ($row->Tahun) - $tahunAwal;
                 $penjualan = number_format($row->Jumlah * $row->Harga);
-                if ($selisih < 2) {
+                if ($selisih < 3) {
                     $prediksi3 = 0;
                 } else {
                     $prediksi3 = number_format(($row->JumlahM3 * $row->Harga) / 3);
                 }
 
-                if ($selisih < 3) {
+                if ($selisih < 4) {
                     $prediksi4 = 0;
                 } else {
                     $prediksi4 = number_format(($row->JumlahM4 * $row->Harga) / 4);
                 }
 
-                if ($selisih < 4) {
+                if ($selisih < 5) {
                     $prediksi5 = 0;
                 } else {
                     $prediksi5 = number_format(($row->JumlahM5 * $row->Harga) / 5);
@@ -128,7 +128,7 @@
             }
 
             ?>
-            <tr>
+            <!-- <tr>
                 <th>Selisih Moving Average 3 Dengan Tahun Sebelumnya</th>
                 <th><?= number_format($diffM3) ?></th>
             </tr>
@@ -139,10 +139,10 @@
             <tr>
                 <th>Selisih Moving Average 5 Dengan Tahun Sebelumnya</th>
                 <th><?= number_format($diffM5) ?></th>
-            </tr>
+            </tr> -->
             <tr>
 
-                <th>Hasil Peramalan Untuk <?= $hasilPrediksi['Tahun'] ?></th>
+                <th>Hasil Peramalan Untuk <?= $hasilPrediksi['Tahun']+1 ?></th>
                 <th><?= number_format($result) ?></th>
             </tr>
         </thead>

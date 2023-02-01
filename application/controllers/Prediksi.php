@@ -49,7 +49,7 @@ class Prediksi extends CI_Controller
         $filterTahunAkhir = $tahunAkhir['Tahun'];
 
         $data['hasilPrediksi'] = $this->Prediksi_model->hasilPrediksi_view($params, $filterTahunAkhir);
-        $data['hasilPrediksiPrev'] = $this->Prediksi_model->hasilPrediksi_view($params, $filterTahunAkhir - 1);
+        $data['hasilPrediksiPrev'] = $this->Prediksi_model->hasilPrediksi_view($params, $filterTahunAkhir);
         $data['prediksi_view'] = $this->Prediksi_model->prediksi_view($params);
 
 
@@ -74,7 +74,7 @@ class Prediksi extends CI_Controller
         $filterTahunAkhir = $tahunAkhir['Tahun'];
 
         $data['hasilPrediksi'] = $this->Prediksi_model->hasilPrediksi_view($params, $filterTahunAkhir);
-        $data['hasilPrediksiPrev'] = $this->Prediksi_model->hasilPrediksi_view($params, $filterTahunAkhir - 1);
+        $data['hasilPrediksiPrev'] = $this->Prediksi_model->hasilPrediksi_view($params, $filterTahunAkhir);
         $data['prediksi_view'] = $this->Prediksi_model->prediksi_view($params);
 
 
