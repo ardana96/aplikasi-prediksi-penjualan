@@ -95,6 +95,7 @@
                         <?php
                         $jumlahPrev = $hasilPrediksiPrev['Jumlah'] * $hasilPrediksiPrev['Harga'];
 
+                        // echo $hasilPrediksiPrev['Jumlah']* $hasilPrediksiPrev['Harga'].'<br>'. $hasilPrediksi['JumlahM3'] * $hasilPrediksi['Harga']/3;
 
 
                         $prediksiM3 = ($hasilPrediksi['JumlahM3'] * $hasilPrediksi['Harga']) / 3;
@@ -148,15 +149,17 @@
                         </tr> -->
                         <tr>
 
-                            <th>Hasil Peramalan Untuk <?= $hasilPrediksi['Tahun']+1 ?></th>
+                            <th>Hasil Peramalan Untuk <?= $hasilPrediksi['Tahun'] ?></th>
                             <th><?= number_format($result) ?></th>
                         </tr>
                     </thead>
                 </table>
 
 
-                <a href="<?php echo base_url() . 'prediksi/print/' . $BarangId; ?>" target="_blank" class="btn btn-danger waves-effect btn-xs">
+                <a href="<?php echo base_url() . 'prediksi/print/' . $BarangId; ?>" target="_blank" class="btn btn-danger waves-effect">
                     <i class="material-icons">print</i> CETAK</a>
+
+                  
 
             </div>
         </div>

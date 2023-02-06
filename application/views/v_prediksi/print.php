@@ -142,7 +142,7 @@
             </tr> -->
             <tr>
 
-                <th>Hasil Peramalan Untuk <?= $hasilPrediksi['Tahun']+1 ?></th>
+                <th>Hasil Peramalan Untuk <?= $hasilPrediksi['Tahun'] ?></th>
                 <th><?= number_format($result) ?></th>
             </tr>
         </thead>
