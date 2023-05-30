@@ -22,9 +22,9 @@
         padding: 8px 20px;
     }
 
-    div.a {
+    /* div.a {
         text-align: center;
-    }
+    } */
 </style>
 
 <html lang="en">
@@ -33,8 +33,10 @@
 </head>
 
 <body>
+    
     <div class="a">
-        <h1>HASIL PREDIKSI</h1>
+    <img src="<?php echo base_url(); ?>images/batiksolo.jpg" width="100" height="25"/>
+        <h1 style = "text-align: center;">HASIL PREDIKSI</h1>
     </div>
     <table class="table1">
         <thead>
